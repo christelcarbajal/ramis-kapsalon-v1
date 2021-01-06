@@ -17,7 +17,8 @@ nav {
     display: flex;
     color: white;
     font-weight: bolder;
-    font-size: 1.2em;
+    font-family: Philosopher;
+    font-size: 1.5em;
     width: 100vw;
     justify-content: flex-start;
     background-color: black;
