@@ -23,13 +23,14 @@ nav {
     background-color: #666;
 }
 
-nav div {
+nav div{
     padding: 10px 0;
     width:10vw;
     text-align: center;
     cursor: pointer;
     transition: all 0.4s ease-out;
 }
+
 
 nav div:hover {
     background-color: white;
@@ -99,7 +100,7 @@ img {
 }
 
 header {
-    background-image: url("../../../Chriz/Images/background-image.jpg");
+    background-image: url("../../../CLE2-project/images/background-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
