@@ -2,7 +2,7 @@ body {
     margin: 0 auto;
     padding: 0;
     color: white;
-    font-family: Merriweather;
+    font-family: Merriweather fantasy;
     background-color: black;
 
 }
@@ -17,7 +17,7 @@ nav {
     display: flex;
     color: white;
     font-weight: bolder;
-    font-family: Philosopher;
+    font-family: Philosopher fantasy ;
     font-size: 1.5em;
     width: 100vw;
     justify-content: flex-start;
