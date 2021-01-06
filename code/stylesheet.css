@@ -20,7 +20,13 @@ nav {
     font-size: 1.2em;
     width: 100vw;
     justify-content: flex-start;
-    background-color: #666;
+    background-color: #4A4747;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 nav div{
@@ -34,7 +40,7 @@ nav div{
 
 nav div:hover {
     background-color: white;
-    color: #333439;
+    color: #4A4747;
 }
 
 nav.sticky {
