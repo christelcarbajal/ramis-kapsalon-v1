@@ -3,18 +3,18 @@ body {
     box-sizing: border-box;
     border-radius: 5px;
     border: black;
-
     color: white;
     padding: 10px;
     margin: 0 auto;
     font-family: Merriweather fantasy;
-    font-size: large;
+    font-size: medium;
 }
 
 main {
     max-width: 700px;
     margin: 0 auto;
     color: black;
+
 }
 
 nav {
@@ -63,9 +63,8 @@ nav.sticky {
 
 h1 {
     margin: 0;
-    border-bottom-style: outset;
+    border-bottom-style: solid;
     border-radius: unset;
-
 }
 
 h2 {
@@ -94,12 +93,12 @@ section div {
 label {
     width: 150px;
     display: inline-block;
-    border-bottom: thin;
+
+
 }
 
 input {
     padding: 6px;
-
 }
 
 button {
