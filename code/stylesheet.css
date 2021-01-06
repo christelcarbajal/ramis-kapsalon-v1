@@ -46,7 +46,7 @@ nav div{
 
 nav div:hover {
     background-color: white;
-    color: #4A4747;
+    color: black;
 }
 
 nav.sticky {
