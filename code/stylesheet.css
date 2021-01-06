@@ -2,7 +2,7 @@ body {
     margin: 0 auto;
     padding: 0;
     color: white;
-    font-family: sans-serif;
+    font-family: Merriweather;
     background-color: black;
 
 }
@@ -10,7 +10,7 @@ body {
 main {
     max-width: 700px;
     margin: 0 auto;
-    color: white;
+    color: black;
 }
 
 nav {
@@ -20,7 +20,7 @@ nav {
     font-size: 1.2em;
     width: 100vw;
     justify-content: flex-start;
-    background-color: #4A4747;
+    background-color: black;
 }
 
 a:link {
@@ -63,6 +63,8 @@ nav.sticky {
 
 h1 {
     margin: 0;
+    border-bottom-style: outset;
+    border-radius: unset;
 }
 
 h2 {
@@ -80,7 +82,7 @@ footer a {
 section {
     margin: 20px;
     padding: 20px;
-    background-color: #666666;
+    background-color: white;
 }
 
 section div {
