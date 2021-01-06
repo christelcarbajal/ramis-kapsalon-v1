@@ -1,0 +1,134 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+    background-color: black;
+
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    color: white;
+}
+
+nav {
+    display: flex;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+    width: 100vw;
+    justify-content: flex-start;
+    background-color: #666;
+}
+
+nav div {
+    padding: 10px 0;
+    width:10vw;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+nav div:hover {
+    background-color: white;
+    color: #333439;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+}
+
+* {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+}
+a {
+    color: black;
+}
+
+footer a {
+    color: white;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #666666;
+}
+
+section div {
+    margin-top: 16px ;
+
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+
+}
+
+input {
+    padding: 6px;
+}
+
+button {
+    padding: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+/* procent van de parent */
+
+img {
+    width: 100%;
+}
+
+header {
+    background-image: url("../../../Chriz/Images/background-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 404px
+}
+
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 70px;
+    color: white;
+}
+
+.redText {
+    color: red;
+}
+
+.greenText {
+    color: green;
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        display: block;
+    }
+
+    label {
+        width: 200px;
+        display: block;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rami's Kapsalon</title>
+    <link   rel="stylesheet" href="index-style.css">
+
+</head>
+<body>
+<header></header>
+
+<nav>
+    <div>Home</div>
+    <div>Afspraak</div>
+    <div>Tarieven</div>
+    <div>Contact</div>
+    <div>Login</div>
+</nav>
+
+<main>
+    <section>
+        <h1>Afspraak maken</h1>
+        <form action="test1.php" method="post">
+        <div>
+            <label for="firstname">Voornaam:</label>
+            <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div>
+            <label for="middlename">Tussenvoegsel:</label>
+            <input type="text" id="middlename" name="middlename">
+        </div>
+        <div>
+            <label for="lastname">Achternaam:</label>
+            <input type="text" id="lastname" name="lastname" required>
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="phone">Telefoon:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <div>
+            <label for="date">Datum:</label>
+
+            <input type="date" id="date" name="date"
+                   min="2021-01-01" max="2025-12-31" required>
+        </div>
+        <div>
+            <button type="submit"> Bevestigen</button>
+        </div>
+        </form>
+    </section>
+
+    <section>
+        <h1>Gallery</h1>
+    </section>
+
+</main>
+<footer>
+    Twitter | Instagram
+</footer>
+
+
+</body>
+</html>

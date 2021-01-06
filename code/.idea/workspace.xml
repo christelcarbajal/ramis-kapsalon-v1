@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="656e6762-19d7-4f26-baac-518fbb4c57b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../hrfiles/project-ramie/code/index-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hrfiles/project-ramie/code/index-test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hrfiles/project-ramie/code/test1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hrfiles/project-ramie/images/background-image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hrfiles/project-ramie/images/ramie-logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/Images/Background image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/code/1Home1.0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/code/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/1PHP Formulier.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/code/2Formulier1.0.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/2FormulierCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/code/2Formulier1.1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/Pagina1.2.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/code/1Home1.1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/Pagina1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/Pagina2.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../hrfiles/prototype-project-ramie/code/Pagina1-test.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../hrfiles/project-ramie" />
+  </component>
+  <component name="ProjectId" id="1mUN3lWuQCenuEKhgGVInkZBy3G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hrfiles/project-ramie" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\hrfiles\project-ramie\code" />
+      <recent name="C:\xampp\htdocs\hrfiles\prototype-project-ramie" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Chriz\test1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="656e6762-19d7-4f26-baac-518fbb4c57b2" name="Default Changelist" comment="" />
+      <created>1609544013059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609544013059</updated>
+      <workItem from="1609544014213" duration="11000" />
+      <workItem from="1609544042315" duration="22668000" />
+      <workItem from="1609725367175" duration="37000" />
+      <workItem from="1609725410663" duration="80000" />
+      <workItem from="1609725499198" duration="17720000" />
+      <workItem from="1609849040252" duration="203000" />
+      <workItem from="1609925093284" duration="4875000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="91" y="0" key="#Intentions" timestamp="1609550709187">
+      <screen x="0" y="0" width="1194" height="720" />
+    </state>
+    <state x="91" y="0" key="#Intentions/0.0.1194.720@0.0.1194.720" timestamp="1609550709187" />
+    <state x="441" y="213" key="#Notifications" timestamp="1609931093525">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="441" y="213" key="#Notifications/0.0.1450.864/-1920.0.1920.1040@0.0.1450.864" timestamp="1609931093525" />
+    <state x="441" y="213" key="#Notifications/0.0.1450.864/-3840.-104.1280.680@0.0.1450.864" timestamp="1609725505296" />
+    <state x="390" y="118" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609725453282">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="390" y="118" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1450.864/-3840.-104.1280.680@0.0.1450.864" timestamp="1609725453282" />
+    <state x="274" y="0" key="CommitChangelistDialog2" timestamp="1609930418169">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="274" y="0" key="CommitChangelistDialog2/0.0.1450.864/-1920.0.1920.1040@0.0.1450.864" timestamp="1609930418169" />
+    <state x="453" y="128" key="FileChooserDialogImpl" timestamp="1609931122329">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="453" y="128" key="FileChooserDialogImpl/0.0.1450.864/-1920.0.1920.1040@0.0.1450.864" timestamp="1609931122329" />
+    <state x="453" y="128" key="FileChooserDialogImpl/0.0.1450.864/-3840.-104.1280.680@0.0.1450.864" timestamp="1609544172203" />
+    <state x="581" y="304" key="Github.ShareDialog" timestamp="1609931155695">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="581" y="304" key="Github.ShareDialog/0.0.1450.864/-1920.0.1920.1040@0.0.1450.864" timestamp="1609931155695" />
+    <state x="441" y="282" key="NewPhpFileDialog" timestamp="1609546940961">
+      <screen x="0" y="0" width="1194" height="720" />
+    </state>
+    <state x="441" y="282" key="NewPhpFileDialog/0.0.1194.720@0.0.1194.720" timestamp="1609546940961" />
+    <state x="535" y="338" key="NewPhpFileDialog/0.0.1450.864/-3840.-104.1280.680@0.0.1450.864" timestamp="1609544195514" />
+    <state x="117" y="0" key="SettingsEditor" timestamp="1609725888321">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="117" y="0" key="SettingsEditor/0.0.1450.864/-3840.-104.1280.680@0.0.1450.864" timestamp="1609725888321" />
+    <state x="467" y="175" key="git4idea.ui.GitUnstashDialog" timestamp="1609930793840">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="467" y="175" key="git4idea.ui.GitUnstashDialog/0.0.1450.864/-1920.0.1920.1040@0.0.1450.864" timestamp="1609930793840" />
+    <state x="468" y="258" key="scopes" timestamp="1609544103552">
+      <screen x="0" y="0" width="1450" height="864" />
+    </state>
+    <state x="468" y="258" key="scopes/0.0.1450.864/-3840.-104.1280.680@0.0.1450.864" timestamp="1609544103552" />
+  </component>
+</project>
