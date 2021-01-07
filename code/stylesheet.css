@@ -1,5 +1,8 @@
 body {
     background-color: black;
+    background-image: url("../images/barber-tool.jpg");
+    background-repeat: repeat-x;
+    background-position: top;
     box-sizing: border-box;
     border-radius: 5px;
     border: black;
@@ -11,7 +14,7 @@ body {
 }
 
 main {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     color: black;
 
@@ -19,12 +22,13 @@ main {
 
 nav {
     display: flex;
+    padding: 5px 0;
+    margin: 2px;
     color: white;
     font-weight: bolder;
     font-family: Philosopher fantasy ;
-    font-size: 1.5em;
+    font-size: 1.3em;
     width: 100vw;
-    justify-content: flex-start;
     background-color: black;
 }
 
@@ -58,7 +62,6 @@ nav.sticky {
     position: fixed;
     top: 0;
 }
-
 
 
 h1 {
@@ -115,11 +118,12 @@ img {
 }
 
 header {
-    background-image: url("../images/background-image.jpg");
-    background-size: cover;
+    background-image: url("../images/ramie-logo.jpeg");
     background-repeat: no-repeat;
+    background-size: 700px;
     background-position: center;
-    height: 404px
+    height: 360px;
+
 }
 
 
