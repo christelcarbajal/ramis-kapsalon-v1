@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <title>Rami's Kapsalon</title>
     <link   rel="stylesheet" href="stylesheet.css">
+    <link   rel="stylesheet" href="stylesheet-img-slider.css">
 
 </head>
 <body>
@@ -19,23 +20,38 @@
 
 <main>
     <section>
-        <h1>Inloggen</h1>
+        <h1>Aanmelden</h1>
         <form action="###.php" method="post">
-
+            <div>
+                <label for="firstname">Voornaam:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Voornaam" required>
+            </div>
+            <div>
+                <label for="middlename">Tussenvoegsel:</label>
+                <input type="text" id="middlename" name="middlename" placeholder="Tussenvoegsel">
+            </div>
+            <div>
+                <label for="lastname">Achternaam:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Achternaam" required>
+            </div>
             <div>
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" placeholder="Freshcut@mail.com" required>
             </div>
             <div>
+                <label for="phone">Telefoon:</label>
+                <input type="text" id="phone" name="phone" placeholder="0612345678" required>
+            </div>
+            <div>
                 <label for="wachtwoord">Wachtwoord:</label>
                 <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" required>
             </div>
-            <p>
-                Nog geen account? Maak <a style="color: black" href="aanmelden.html"><u>hier</u></a> een account aan.
-            </p>
             <div>
-
-                <button type="submit"> Inloggen</button>
+                <label for="wachtwoord">Bevestig wachtwoord:</label>
+                <input type="password" id="wachtwoord1" name="wachtwoord" placeholder="Wachtwoord" required>
+            </div>
+            <div>
+                <button type="submit">Maak account</button>
             </div>
         </form>
     </section>
