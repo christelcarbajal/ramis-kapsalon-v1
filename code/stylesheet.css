@@ -118,13 +118,18 @@ img {
 }
 
 .bio-img {
+    display:inline-block;
     width: 50%;
-    height: 50%;
-    float: inside left;
+    margin-right: 20px;
+
+    border-radius: 20px;
 }
 
+
 .bio-text {
-    width: 100%;
+    width: 40%;
+    display: inline-block;
+    text-align: center;
 }
 
 header {
