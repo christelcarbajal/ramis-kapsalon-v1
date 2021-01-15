@@ -8,6 +8,7 @@ $middlename = empty($_POST['middlename']) ? '' :  $_POST['middlename'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservering Geslaagd</title>
     <link   rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="bevestiging-stylesheet.css"
 </head>
 <body>
 <h2>Reservering Geslaagd!</h2>
