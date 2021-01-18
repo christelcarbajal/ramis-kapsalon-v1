@@ -1,20 +1,36 @@
-body {
-    background-color: #0E0E0E;
-    background-image: url("../images/r-kapsalon-picture.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
 
-    border-radius: 5px;
-    border: black;
-    color: white;
-    padding: 10px;
-    margin: 0 auto;
-    font-family: Merriweather fantasy;
-    font-size: medium;
+/* Container holding the image and the text */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main {
-    max-width: 200px;
+img {
+    width: 90%;
+    height: fit-content;
+    bottom: auto;
     margin: 0 auto;
-    color: black;
+}
 
+/* Bottom right text */
+.text-block {
+    height: 255px;
+    width: 380px;
+    background-color: black;
+    position: absolute;
+    top: 6%;
+    left:38%;
+    border-style: solid;
+    border-color: #EEEEEE;
+    margin: 50px 0 0 -50px;
+    padding: 40px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 50px;
+    font-family: Merriweather fantasy;
+}
+
+body {
+    background-color: black;
+}

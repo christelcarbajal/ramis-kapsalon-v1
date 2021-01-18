@@ -100,13 +100,14 @@ input {
 }
 
 button {
+    margin-top: 20%;
+    margin-left: 35px;
     padding: 10px;
-    font-size: medium;
+    font-size: 1.2em;
     cursor: pointer;
     background-color: lightslategrey;
     color: white;
 }
-/* procent van de parent */
 
 img {
     width: 100%;

@@ -94,6 +94,11 @@ body{
         height: 375px;
     }
 
+    /* .slide img {
+        width: 600px;
+        height: 375px;
+    } */
+
     .img-slider .slide .info{
         padding: 10px 25px;
     }
@@ -124,6 +129,11 @@ body{
         height: 250px;
     }
 
+   /* .slide img {
+        width: 400px;
+        height: 250px;
+    }*/
+
     .img-slider .slide .info{
         padding: 10px 20px;
     }
@@ -153,6 +163,9 @@ body{
         width: 320px;
         height: 200px;
     }
+
+/*    .slide img {
+    }  */
 
     .img-slider .slide .info{
         padding: 5px 10px;
