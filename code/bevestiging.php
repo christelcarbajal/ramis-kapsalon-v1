@@ -25,6 +25,7 @@ echo 'Telefoon:'.$_POST['phone'].'<br>';
 
 $date = date ('d-m-Y' , strtotime($_POST ['date']));
 echo 'Datum:'.$date.'<br>';
+echo 'Tijd:'.$_POST['time'].'<br>';
 ?>
 </body>
 </html>
