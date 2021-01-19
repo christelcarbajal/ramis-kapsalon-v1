@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rami's Kapsalon</title>
     <link   rel="stylesheet" href="stylesheet.css">
-    <link   rel="stylesheet" href="stylesheet-img-slider.css">
 
 </head>
-<body>
+
 <header></header>
 
+<body>
 <nav>
     <a href="home.html"><div>Home</div></a>
     <a href="afspraak-form.html"><div>Afspraak</div></a>
@@ -20,39 +21,39 @@
 
 <main>
     <section>
+        <div class=" user-login">
         <h1>Afspraak maken</h1><br>
         <form action="bevestiging.php" method="post">
 
-        <div>
+            <div>
             <label for="firstname">Voornaam:</label>
             <input type="text" id="firstname" name="firstname" placeholder="Voornaam" required>
-        </div>
+            </div>
 
-        <div>
+            <div>
             <label for="middlename">Tussenvoegsel:</label>
             <input type="text" id="middlename" name="middlename" placeholder="Tussenvoegsel">
-        </div>
+            </div>
 
-        <div>
+            <div>
             <label for="lastname">Achternaam:</label>
             <input type="text" id="lastname" name="lastname" placeholder="Achternaam" required>
-        </div>
+            </div>
 
-        <div>
+            <div>
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="Freshcut@mail.com" required>
-        </div>
+            </div>
 
-        <div>
+            <div>
             <label for="phone">Telefoon:</label>
             <input type="text" id="phone" name="phone" placeholder="0612345678" required>
-        </div>
+            </div>
 
-        <div>
+            <div>
             <label for="date">Datum:</label>
-            <input type="date" id="date" name="date"
-                   min="2021-01-01" max="2025-12-31" required>
-        </div>
+            <input type="date" id="date" name="date" min="2021-01-01" max="2025-12-31" required>
+            </div>
 
             <div>
                 <label for="time">Tijd:</label>
@@ -60,15 +61,14 @@
             </div>
 
             <div>
-            <button type="submit"> Bevestigen</button>
-        </div>
-
+                <button type="submit"> Bevestigen</button>
+            </div>
         </form>
+        </div>
     </section>
 
     <section>
     <h1>Gallery</h1><br>
-
         <div class="img-slider">
             <div class="img-container">
             <div class="slide active">
@@ -77,80 +77,92 @@
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic2.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic3.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic4.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic5.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
-            <div class="slide">
+
+                <div class="slide">
                 <img src="../images/gallery-pic6.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
-            <div class="slide">
+
+                <div class="slide">
                 <img src="../images/gallery-pic7.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic8.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
-            <div class="slide">
+
+                <div class="slide">
                 <img src="../images/gallery-pic9.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic10.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic11.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
+
             <div class="slide">
                 <img src="../images/gallery-pic12.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
-            <div class="slide">
+
+                <div class="slide">
                 <img src="../images/gallery-pic13.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
-
             </div>
+
             <div class="navigation">
                 <div class="btn active"></div>
                 <div class="btn"></div>

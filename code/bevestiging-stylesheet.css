@@ -1,3 +1,6 @@
+body {
+    background-color: black;
+}
 
 /* Container holding the image and the text */
 .container {
@@ -31,6 +34,3 @@ img {
     font-family: Merriweather fantasy;
 }
 
-body {
-    background-color: black;
-}
