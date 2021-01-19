@@ -23,10 +23,8 @@ $time = $_POST['time'];
         <h2>Reservering Geslaagd!</h2>
         <div>
             <p>
-                Voornaam:&nbsp; <?= $firstname ?>
-                <br>
-                Tussenvoegsel:&nbsp; <?= $middlename ?>
-                <br>
+                Voornaam:&nbsp; <?= $firstname ?><br>
+                <?= !empty($middlename)? 'Tussenvoegsel: '.$middlename.'<br/>' : '' ?>
                 Achternaam:&nbsp; <?= $lastname ?>
                 <br>
                 E-mail:&nbsp; <?= $email ?>

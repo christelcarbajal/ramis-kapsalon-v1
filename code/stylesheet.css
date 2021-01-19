@@ -72,6 +72,7 @@ h2 {
     background-color: black;
     color: white;
 }
+
 a {
     color: black;
 }
@@ -100,7 +101,7 @@ input {
 }
 
 button {
-    margin-top: 20%;
+    margin-top: 11%;
     margin-left: 35px;
     padding: 10px;
     font-size: 1.2em;
