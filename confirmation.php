@@ -14,11 +14,11 @@ $time = $_POST['time'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservering Geslaagd</title>
-    <link rel="stylesheet" href="bevestiging-stylesheet.css">
+    <link rel="stylesheet" href="css/bevestiging-stylesheet.css">
 </head>
 <body>
 <div class="container">
-    <img src="../images/r-kapsalon-picture.jpg" alt="backgroundImage" width="960" height="720">
+    <img src="images/r-kapsalon-picture.jpg" alt="backgroundImage" width="960" height="720">
     <div class="text-block">
         <h2>Reservering Geslaagd!</h2>
         <div>
@@ -35,6 +35,7 @@ $time = $_POST['time'];
                 <br>
                 Tijd:&nbsp; <?= $time ?>
             </p>
+            <a href="home.php"><div id="submit"><input type="submit" name="back" value="Back"/></div></a>
         </div>
     </div>
 </div>

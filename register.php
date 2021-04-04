@@ -1,27 +1,30 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <title>Rami's Kapsalon</title>
-    <link   rel="stylesheet" href="stylesheet.css">
-    <link   rel="stylesheet" href="stylesheet-img-slider.css">
+    <link   rel="stylesheet" href="css/stylesheet.css">
+    <link   rel="stylesheet" href="css/bevestiging-stylesheet.css">
 </head>
 <header></header>
 
 <body>
 <nav>
-    <a href="home.html"><div>Home</div></a>
-    <a href="afspraak-form.html"><div>Afspraak</div></a>
-    <a href="tarieven.html"><div>Tarieven</div></a>
-    <a href="contact.html"><div>Contact</div></a>
-    <a href="login.html"><div>Login</div></a>
+    <a href="home.php"><div>Home</div></a>
+    <a href="appointment.php"><div>Afspraak</div></a>
+    <a href="prices.php"><div>Tarieven</div></a>
+    <a href="contact.php"><div>Contact</div></a>
+    <a href="login.php"><div>Login</div></a>
 </nav>
 
 <main>
     <section>
         <div class="user-create">
         <h1>Aanmelden</h1>
-        <form action="###.php" method="post">
+        <form action="confirmation.php" method="post">
             <div>
                 <label for="firstname">Voornaam:</label>
                 <input type="text" id="firstname" name="firstname" placeholder="Voornaam" required>
@@ -58,7 +61,7 @@
             </div>
 
             <div>
-                <button type="submit">Maak account</button>
+                <input type="submit" name="submit" value="Submit"/>
             </div>
         </form>
         </div>

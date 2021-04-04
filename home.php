@@ -1,27 +1,30 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rami's Kapsalon</title>
-    <link   rel="stylesheet" href="stylesheet.css">
+    <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
-    <header><a href="afspraak-form.html"><div id="button"><button type="button">Maak afspraak!</button></div></a></header>
-
+    <header><a href="appointment.php"><div id="submit"><input type="submit" name="submit" value="Make an appointment"/></div></a></header>
 <body>
 <nav>
-    <a href="home.html"><div>Home</div></a>
-    <a href="afspraak-form.html"><div>Afspraak</div></a>
-    <a href="tarieven.html"><div>Tarieven</div></a>
-    <a href="contact.html"><div>Contact</div></a>
-    <a href="login.html"><div>Login</div></a>
+    <a href="home.php"><div>Home</div></a>
+    <a href="appointment.php"><div>Afspraak</div></a>
+    <a href="prices.php"><div>Tarieven</div></a>
+    <a href="contact.php"><div>Contact</div></a>
+    <a href="login.php"><div>Login</div></a>
 </nav>
 
 <main>
     <section>
         <div id="biografie">
         <h1>Biografie</h1><br>
-            <img src="../images/ramie-biografie.JPG" alt="ramie-biografie" class="bio-img">
+            <img src="images/ramie-biografie.JPG" alt="ramie-biografie" class="bio-img">
             <div class="biografie-tekst">
             <p> Ramyar Mohamad beter bekend als "Rami" is een kapper en eigenaar van Rami's Kapsalon.
             Sinds klein heeft hij grote interesse in de kapperswereld,

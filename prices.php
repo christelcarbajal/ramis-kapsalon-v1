@@ -1,20 +1,24 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rami's Kapsalon</title>
-    <link   rel="stylesheet" href="stylesheet.css">
+    <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
 <header></header>
 
 <body>
 <nav>
-    <a href="home.html"><div>Home</div></a>
-    <a href="afspraak-form.html"><div>Afspraak</div></a>
-    <a href="tarieven.html"><div>Tarieven</div></a>
-    <a href="contact.html"><div>Contact</div></a>
-    <a href="login.html"><div>Login</div></a>
+    <a href="home.php"><div>Home</div></a>
+    <a href="appointment.php"><div>Afspraak</div></a>
+    <a href="prices.php"><div>Tarieven</div></a>
+    <a href="contact.php"><div>Contact</div></a>
+    <a href="login.php"><div>Login</div></a>
 </nav>
 
 <main>

@@ -1,10 +1,14 @@
+<?php
+require_once "includes/database.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rami's Kapsalon</title>
-    <link   rel="stylesheet" href="stylesheet.css">
+    <link   rel="stylesheet" href="css/stylesheet.css">
 
 </head>
 
@@ -12,18 +16,18 @@
 
 <body>
 <nav>
-    <a href="home.html"><div>Home</div></a>
-    <a href="afspraak-form.html"><div>Afspraak</div></a>
-    <a href="tarieven.html"><div>Tarieven</div></a>
-    <a href="contact.html"><div>Contact</div></a>
-    <a href="login.html"><div>Login</div></a>
+    <a href="home.php"><div>Home</div></a>
+    <a href="appointment.php"><div>Afspraak</div></a>
+    <a href="prices.php"><div>Tarieven</div></a>
+    <a href="contact.php"><div>Contact</div></a>
+    <a href="login.php"><div>Login</div></a>
 </nav>
 
 <main>
     <section>
         <div class=" user-login">
         <h1>Afspraak maken</h1><br>
-        <form action="bevestiging.php" method="post">
+        <form action="confirmation.php" method="post">
 
             <div>
             <label for="firstname">Voornaam:</label>
@@ -61,7 +65,7 @@
             </div>
 
             <div>
-                <button type="submit"> Bevestigen</button>
+                <input type="submit" name="submit" value="Submit"/>
             </div>
         </form>
         </div>
@@ -72,91 +76,91 @@
         <div class="img-slider">
             <div class="img-container">
             <div class="slide active">
-                <img src="../images/gallery-pic1.jpeg" alt="">
+                <img src="images/gallery-pic1.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic2.jpeg" alt="">
+                <img src="images/gallery-pic2.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic3.jpeg" alt="">
+                <img src="images/gallery-pic3.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic4.jpeg" alt="">
+                <img src="images/gallery-pic4.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic5.jpeg" alt="">
+                <img src="images/gallery-pic5.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
                 <div class="slide">
-                <img src="../images/gallery-pic6.jpeg" alt="">
+                <img src="images/gallery-pic6.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
                 <div class="slide">
-                <img src="../images/gallery-pic7.jpeg" alt="">
+                <img src="images/gallery-pic7.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic8.jpeg" alt="">
+                <img src="images/gallery-pic8.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
                 <div class="slide">
-                <img src="../images/gallery-pic9.jpeg" alt="">
+                <img src="images/gallery-pic9.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic10.jpeg" alt="">
+                <img src="images/gallery-pic10.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic11.jpeg" alt="">
+                <img src="images/gallery-pic11.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="../images/gallery-pic12.jpeg" alt="">
+                <img src="images/gallery-pic12.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
             </div>
 
                 <div class="slide">
-                <img src="../images/gallery-pic13.jpeg" alt="">
+                <img src="images/gallery-pic13.jpeg" alt="">
                 <div class="info">
                     <h2></h2>
                 </div>
@@ -179,69 +183,12 @@
                 <div class="btn"></div>
             </div>
         </div>
-
-        <script type="text/javascript">
-            let slides = document.querySelectorAll('.slide');
-            let btns = document.querySelectorAll('.btn');
-            let currentSlide = 1;
-
-            // Javascript for image slider manual navigation
-            let manualNav = function(manual){
-                slides.forEach((slide) => {
-                    slide.classList.remove('active');
-
-                    btns.forEach((btn) => {
-                        btn.classList.remove('active');
-                    });
-                });
-
-                slides[manual].classList.add('active');
-                btns[manual].classList.add('active');
-            }
-
-            btns.forEach((btn, i) => {
-                btn.addEventListener("click", () => {
-                    manualNav(i);
-                    currentSlide = i;
-                });
-            });
-
-            // Javascript for image slider autoplay navigation
-            let repeat = function(activeClass){
-                let active = document.getElementsByClassName('active');
-                let i = 1;
-
-                let repeater = () => {
-                    setTimeout(function(){
-                        [...active].forEach((activeSlide) => {
-                            activeSlide.classList.remove('active');
-                        });
-
-                        slides[i].classList.add('active');
-                        btns[i].classList.add('active');
-                        i++;
-
-                        if(slides.length === i){
-                            i = 0;
-                        }
-                        if(i >= slides.length){
-                            return;
-                        }
-                        repeater();
-                    }, 5000);
-                }
-                repeater();
-            }
-            repeat();
-        </script>
-
     </section>
 
 </main>
+<script src="./js/imageslider.js"></script>
+</body>
 <footer>
     <a href="#">Twitter</a> | <a href="https://www.instagram.com/ramiskapsalon/?hl=nl">Instagram</a> | <a href="https://www.facebook.com/ramiskapsalon/">Facebook</a>
 </footer>
-
-
-</body>
 </html>
