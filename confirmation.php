@@ -1,11 +1,14 @@
 <?php
-$firstname = $_POST ['firstname'];
-$middlename = empty($_POST['middlename']) ? '' :  $_POST['middlename'];
-$lastname = $_POST['lastname'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$date = $_POST['date'];
-$time = $_POST['time'];
+
+require_once "includes/database.php";
+
+$firstname = $_GET ['firstname'];
+$middlename = empty($_GET['middlename']) ? '' :  $_GET['middlename'];
+$lastname = $_GET['lastname'];
+$email = $_GET['email'];
+$phone = $_GET['phone'];
+$date = $_GET['date'];
+$time = $_GET['time'];
 ?>
 
 <!DOCTYPE html>

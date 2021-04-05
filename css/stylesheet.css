@@ -216,6 +216,11 @@ iframe{
     max-width: 100%;
 }
 
+.errors {
+    color: red;
+}
+
+
 @media screen and (max-width: 550px) {
     header{
         background-size: 375px;

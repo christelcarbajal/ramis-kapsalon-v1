@@ -1,5 +1,58 @@
 <?php
+
+/** @var $db */
 require_once "includes/database.php";
+
+if (isset($_POST['submit'])) {
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+
+    $errors = [];
+    if (empty($firstname)) {
+        $errors[] = 'Het veldnaam met "Voornaam" mag niet leeg zijn.';
+    }
+    if (empty($lastname)) {
+        $errors[] = 'Het veldnaam met "Achternaam" mag niet leeg zijn.';
+    }
+    if (empty($email)) {
+        $errors[] = 'Het veldnaam met "Email" mag niet leeg zijn.';
+    }
+    if (empty($phone)) {
+        $errors[] = 'Het veldnaam met "Telefoon" mag niet leeg zijn.';
+    }
+    if (empty($date)) {
+        $errors[] = 'Het veldnaam met "Datum" mag niet leeg zijn.';
+    }
+    if (empty($time)) {
+        $errors[] = 'Het veldnaam met "Tijd" mag niet leeg zijn.';
+    }
+
+    if (empty($errors)){
+
+
+        $query = "INSERT INTO users (firstname, lastname, email, phone, date, time)
+                  VALUES ('$firstname', '$lastname', '$email', '$phone', '$date', '$time')";
+        $result = mysqli_query($db, $query);
+
+
+        if ($result) {
+            header("Location: /hrfiles/CLE2-project-ramie/confirmation.php?firstname=$firstname&lastname=$lastname&email=$email&phone=$phone&date=$date&time=$time");
+            exit;
+        } else {
+
+
+            // To control if there is an error, without sending it to the user.
+            die(mysqli_error($db));
+        }
+
+        // Close the db connection
+        mysqli_close($db);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,46 +80,40 @@ require_once "includes/database.php";
     <section>
         <div class=" user-login">
         <h1>Afspraak maken</h1><br>
-        <form action="confirmation.php" method="post">
+            <?php if(isset($errors)) { ?>
 
-            <div>
-            <label for="firstname">Voornaam:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Voornaam" required>
-            </div>
+                <ul class="errors">
+                    <?php foreach ($errors as $error) { ?>
+                        <li><?= $error ?></li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
 
-            <div>
-            <label for="middlename">Tussenvoegsel:</label>
-            <input type="text" id="middlename" name="middlename" placeholder="Tussenvoegsel">
-            </div>
+            <form action="" method="post">
 
-            <div>
-            <label for="lastname">Achternaam:</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Achternaam" required>
-            </div>
+            <div><label for="firstname">Voornaam:</label>
+            <input type="text" id="firstname" name="firstname" value="<?php if (isset($firstname)) { echo $firstname; } ?>"/></div>
 
-            <div>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Freshcut@mail.com" required>
-            </div>
+            <div><label for="middlename">Tussenvoegsel:</label>
+            <input type="text" id="middlename" name="middlename"></div>
 
-            <div>
-            <label for="phone">Telefoon:</label>
-            <input type="text" id="phone" name="phone" placeholder="0612345678" required>
-            </div>
+            <div><label for="lastname">Achternaam:</label>
+            <input type="text" id="lastname" name="lastname" value="<?php if (isset($lastname)) { echo $lastname; } ?>"/></div>
 
-            <div>
-            <label for="date">Datum:</label>
-            <input type="date" id="date" name="date" min="2021-01-01" max="2025-12-31" required>
-            </div>
+            <div><label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" value="<?php if (isset($email)) { echo $email; } ?>"/></div>
 
-            <div>
-                <label for="time">Tijd:</label>
-                <input type="time" id="time" name="time" required>
-            </div>
+            <div><label for="phone">Telefoon:</label>
+            <input type="text" id="phone" name="phone" value="<?php if (isset($phone)) { echo $phone; } ?>"/></div>
 
-            <div>
-                <input type="submit" name="submit" value="Submit"/>
-            </div>
+            <div><label for="date">Datum:</label>
+            <input type="date" id="date" name="date" min="2021-01-01" max="2025-12-31" value="<?php if (isset($date)) { echo $date; } ?>"/></div>>
+
+            <div><label for="time">Tijd:</label>
+                <input type="time" id="time" name="time" value="<?php if (isset($time)) { echo $time; } ?>"/></div>
+
+            <div> <input type="submit" name="submit" value="Submit"/></div>
+
         </form>
         </div>
     </section>

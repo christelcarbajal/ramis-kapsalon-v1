@@ -1,5 +1,44 @@
 <?php
 
+/**
+ * @var $username
+ * @var $db
+ */
+
+require_once "includes/database.php";
+
+// If form is posted, validate it
+if (isset($_POST['submit'])) {
+    // Retrieve posted data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Get username and password from db
+    $query = "SELECT * FROM admin WHERE username = '$username'";
+    $result = mysqli_query($db, $query) or die('Error: ' . $query);
+    $users = mysqli_fetch_assoc($result);
+    
+
+    // Check if username exists in database
+    $errors = [];
+    if ($username) {
+//        print_r('Test');
+
+        //Password validation
+        if ($password == $users['password']) {
+
+
+            // Redirect to read page
+            header("Location: /hrfiles/CLE2-project-ramie/read.php");
+            exit;
+
+        } else {
+            $errors[] = 'Je logingegevens zijn onjuist';
+        }
+    } else {
+        $errors[] = 'Je logingegevens zijn onjuist';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,16 +68,20 @@
 
 
             <form method="post" id="login" action="" >
+
+
             <div>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" value="<?= isset ($username) ? htmlentities($username) : '' ?>"/>
                 <span class="errors"><?= isset($errors['username']) ? $errors['username'] : '' ?></span>
             </div>
-            <div>
-                <label for="wachtwoord">Password:</label>
-                <input type="password" id="password" name="password" value="<?= isset ($password) ? htmlentities($password) : '' ?>"/>
-                <span class="errors"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
-            </div>
+
+                <div>
+                    <label for="password">Wachtwoord:</label>
+                    <input type="text" id="password" name="password" value="<?= isset ($password) ? htmlentities($password) : '' ?>"/>
+                    <span class="errors"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
+                </div>
+
             <div>
                 <input type="submit" name="submit" value="Inloggen"/>
             </div>

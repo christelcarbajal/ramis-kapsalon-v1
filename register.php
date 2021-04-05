@@ -1,4 +1,41 @@
 <?php
+
+/** @var $db */
+require_once "includes/database.php";
+
+
+if (isset($_POST['submit'])) {
+    // Postback the data showed to the user
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = $_POST['password'];
+
+    $errors = [];
+    if ($username == '') {
+        $errors['username'] = 'De gebruikersnaam mag niet leeg zijn.';
+    }
+    if ($password == '') {
+        $errors['password'] = 'Het wachtwoord mag niet leeg zijn.';
+    }
+
+    if (empty($errors)) {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        $query = "INSERT INTO users (username, password) VALUES('$username', '$password')";
+        $result = mysqli_query($db, $query)
+        or die('Error: ' . $query);
+
+        if ($result) {
+            header('Location: homepage.php');
+            exit;
+        } else {
+            $errors[] = 'Er is iets fout gegaan met de database. ' . mysqli_error($db);
+        }
+
+        // Close db connection
+        mysqli_close($db);
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
