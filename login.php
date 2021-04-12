@@ -11,7 +11,7 @@ require_once "includes/database.php";
 if (isset($_POST['submit'])) {
     // Retrieve posted data
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = $_POST['pwd'];
 
     // Get username and password from db
     $query = "SELECT * FROM admin WHERE username = '$username'";
@@ -50,8 +50,8 @@ if (isset($_POST['submit'])) {
     <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
 
-<header></header>
 <body>
+<header></header>
 
 <nav>
     <a href="home.php"><div>Home</div></a>
@@ -77,9 +77,9 @@ if (isset($_POST['submit'])) {
             </div>
 
                 <div>
-                    <label for="password">Wachtwoord:</label>
-                    <input type="text" id="password" name="password" value="<?= isset ($password) ? htmlentities($password) : '' ?>"/>
-                    <span class="errors"><?= isset($errors['password']) ? $errors['password'] : '' ?></span>
+                    <label for="pwd">Wachtwoord:</label>
+                    <input type="password" id="pwd" name="pwd" value="<?= isset ($password) ? htmlentities($password) : '' ?>"/>
+                    <span class="errors"><?= isset($errors['pwd']) ? $errors['pwd'] : '' ?></span>
                 </div>
 
             <div>

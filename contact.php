@@ -11,9 +11,9 @@
     <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
 
-<header></header>
 
 <body>
+<header></header>
 <nav>
     <a href="home.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
@@ -77,7 +77,7 @@
         </p>
 
         <p><b>Afspraak maken</b>
-        <br>Een afspraak willen maken? Ga naar onze <a style="color:black" href="appointment.php"><u>afspraken</u></a> site.
+            <br>Een afspraak willen maken? Ga naar onze <a href="appointment.php"><u>afspraken</u></a> site.
         </p>
         </div>
     </section>

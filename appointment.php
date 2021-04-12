@@ -65,9 +65,9 @@ if (isset($_POST['submit'])) {
 
 </head>
 
-<header></header>
 
 <body>
+<header></header>
 <nav>
     <a href="home.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
             <input type="text" id="phone" name="phone" value="<?php if (isset($phone)) { echo $phone; } ?>"/></div>
 
             <div><label for="date">Datum:</label>
-            <input type="date" id="date" name="date" min="2021-01-01" max="2025-12-31" value="<?php if (isset($date)) { echo $date; } ?>"/></div>>
+            <input type="date" id="date" name="date" min="2021-01-01" max="2025-12-31" value="<?php if (isset($date)) { echo $date; } ?>"/></div>
 
             <div><label for="time">Tijd:</label>
                 <input type="time" id="time" name="time" value="<?php if (isset($time)) { echo $time; } ?>"/></div>
