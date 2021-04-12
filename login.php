@@ -49,10 +49,8 @@ if (isset($_POST['submit'])) {
     <title>Rami's Kapsalon</title>
     <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
-
 <body>
 <header></header>
-
 <nav>
     <a href="home.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
@@ -60,35 +58,27 @@ if (isset($_POST['submit'])) {
     <a href="contact.php"><div>Contact</div></a>
     <a href="login.php"><div>Login</div></a>
 </nav>
-
 <main>
     <section>
         <div class="user-login">
         <h1>Inloggen</h1>
-
-
             <form method="post" id="login" action="" >
-
-
             <div>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" value="<?= isset ($username) ? htmlentities($username) : '' ?>"/>
                 <span class="errors"><?= isset($errors['username']) ? $errors['username'] : '' ?></span>
             </div>
-
                 <div>
                     <label for="pwd">Wachtwoord:</label>
                     <input type="password" id="pwd" name="pwd" value="<?= isset ($password) ? htmlentities($password) : '' ?>"/>
                     <span class="errors"><?= isset($errors['pwd']) ? $errors['pwd'] : '' ?></span>
                 </div>
-
             <div>
                 <input type="submit" name="submit" value="Inloggen"/>
             </div>
             </form>
         </div>
     </section>
-
 </main>
 <footer>
     <a href="#">Twitter</a> | <a href="https://www.instagram.com/ramiskapsalon/?hl=nl">Instagram</a> | <a href="https://www.facebook.com/ramiskapsalon/">Facebook</a>

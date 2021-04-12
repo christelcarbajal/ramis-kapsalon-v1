@@ -10,8 +10,8 @@
     <title>Rami's Kapsalon</title>
     <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
-    <header><a href="appointment.php"><div id="submit"><input type="submit" name="submit" value="Make an appointment"/></div></a></header>
 <body>
+    <header><a href="appointment.php"><div id="submit"><input type="submit" name="submit" value="Make an appointment"/></div></a></header>
 <nav>
     <a href="home.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>

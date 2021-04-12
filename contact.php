@@ -10,8 +10,6 @@
     <title>Rami's Kapsalon</title>
     <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
-
-
 <body>
 <header></header>
 <nav>

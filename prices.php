@@ -10,7 +10,6 @@
     <title>Rami's Kapsalon</title>
     <link   rel="stylesheet" href="css/stylesheet.css">
 </head>
-
 <body>
 <header></header>
 <nav>
@@ -20,7 +19,6 @@
     <a href="contact.php"><div>Contact</div></a>
     <a href="login.php"><div>Login</div></a>
 </nav>
-
 <main>
     <section>
         <div class="tarieven">
@@ -69,12 +67,9 @@
         </table>
         </div>
     </section>
-
 </main>
-
 <footer>
     <a href="#">Twitter</a> | <a href="https://www.instagram.com/ramiskapsalon/?hl=nl">Instagram</a> | <a href="https://www.facebook.com/ramiskapsalon/">Facebook</a>
 </footer>
-
 </body>
 </html>
