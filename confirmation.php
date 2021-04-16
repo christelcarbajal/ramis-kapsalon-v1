@@ -17,7 +17,7 @@ $time = $_GET['time'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservering Geslaagd</title>
-    <link rel="stylesheet" href="css/bevestiging-stylesheet.css">
+    <link rel="stylesheet" href="css/confirmation-page.css">
 </head>
 <body>
 <div class="container">

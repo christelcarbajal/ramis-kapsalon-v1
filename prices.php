@@ -1,5 +1,9 @@
 <?php
 
+//_js fotos maken van de prijzen of meer informatie geven zoals prijs
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -68,6 +72,7 @@
         </div>
     </section>
 </main>
+<script src="js/main.js"></script>
 <footer>
     <a href="#">Twitter</a> | <a href="https://www.instagram.com/ramiskapsalon/?hl=nl">Instagram</a> | <a href="https://www.facebook.com/ramiskapsalon/">Facebook</a>
 </footer>

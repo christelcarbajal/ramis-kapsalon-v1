@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <title>Rami's Kapsalon</title>
     <link   rel="stylesheet" href="css/stylesheet.css">
-    <link   rel="stylesheet" href="css/bevestiging-stylesheet.css">
+    <link   rel="stylesheet" href="css/confirmation-page.css">
 </head>
 <body>
 <header></header>

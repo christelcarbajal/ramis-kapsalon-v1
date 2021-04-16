@@ -41,10 +41,15 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rami's Kapsalon - Delete pagina</title>
+    <link rel="stylesheet" href="css/reservationlist.css">
 </head>
 <body>
-<h2>Verwijder Afspraak</h2>
-<form action="" method="post">
+<header></header>
+<nav></nav>
+<main></main>
+<section>
+    <h1>Verwijder Afspraak</h1>
+    <form action="" method="post">
     <p>
         Weet u zeker dat u de user
         <?= $user['firstname']?>
@@ -53,6 +58,8 @@ if (isset($_POST['submit'])) {
     </p>
     <input type="hidden" name="id" value="<?= $user['id'] ?>"/>
     <input type="submit" name="submit" value="Verwijderen"/>
-</form>
+
+    </form>
+</section>
 </body>
 </html>

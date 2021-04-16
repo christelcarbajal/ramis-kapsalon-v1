@@ -26,9 +26,16 @@ mysqli_close($db);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rami's Afspraken</title>
+    <link rel="stylesheet" href="css/reservationlist.css">
 </head>
 <body>
-<table>
+<header><a href="login.php"><div id="submit"><input type="submit" name="submit" value="Home"/></div></a></header>
+<nav></nav>
+<main></main>
+<section>
+        <div class="afspraken">
+        <h1>Afspraken</h1>
+            <table>
     <thead>
     <tr>
         <div>
@@ -57,8 +64,9 @@ mysqli_close($db);
         </tr>
     <?php } ?>
     </tbody>
-</table>
-<a class="user-login" href="login.php">Back</a>
+            </table>
+        </div>
+</section>
 </body>
 </html>
 
