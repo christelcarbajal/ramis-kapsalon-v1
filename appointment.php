@@ -13,22 +13,22 @@ if (isset($_POST['submit'])) {
 
     $errors = [];
     if (empty($firstname)) {
-        $errors[] = 'Het veldnaam met "Voornaam" mag niet leeg zijn.';
+        $errors[] = '"Voornaam" mag niet leeg zijn.';
     }
     if (empty($lastname)) {
-        $errors[] = 'Het veldnaam met "Achternaam" mag niet leeg zijn.';
+        $errors[] = '"Achternaam" mag niet leeg zijn.';
     }
     if (empty($email)) {
-        $errors[] = 'Het veldnaam met "Email" mag niet leeg zijn.';
+        $errors[] = '"Email" mag niet leeg zijn.';
     }
     if (empty($phone)) {
-        $errors[] = 'Het veldnaam met "Telefoon" mag niet leeg zijn.';
+        $errors[] = '"Telefoon" mag niet leeg zijn.';
     }
     if (empty($date)) {
-        $errors[] = 'Het veldnaam met "Datum" mag niet leeg zijn.';
+        $errors[] = '"Datum" mag niet leeg zijn.';
     }
     if (empty($time)) {
-        $errors[] = 'Het veldnaam met "Tijd" mag niet leeg zijn.';
+        $errors[] = '"Tijd" mag niet leeg zijn.';
     }
 
     if (empty($errors)){
@@ -115,122 +115,123 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 
-    <section>
-    <h1>Gallery</h1><br>
-        <div class="img-slider">
-            <div class="img-container">
-            <div class="slide active">
-                <img src="images/gallery-pic1.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic2.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic3.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic4.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic5.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic6.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic7.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic8.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic9.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic10.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic11.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="images/gallery-pic12.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-
-                <div class="slide">
-                <img src="images/gallery-pic13.jpeg" alt="">
-                <div class="info">
-                    <h2></h2>
-                </div>
-            </div>
-            </div>
-
-            <div class="navigation">
-                <div class="btn active"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-            </div>
-        </div>
-    </section>
+<!--    <section>-->
+<!--    <h1>Gallery</h1><br>-->
+<!--        <div class="img-slider">-->
+<!--            <div class="img-container">-->
+<!--            <div class="slide active">-->
+<!---->
+<!--                <img src="images/gallery-pic1.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic2.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic3.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic4.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic5.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--                <div class="slide">-->
+<!--                <img src="images/gallery-pic6.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--                <div class="slide">-->
+<!--                <img src="images/gallery-pic7.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic8.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--                <div class="slide">-->
+<!--                <img src="images/gallery-pic9.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic10.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic11.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="slide">-->
+<!--                <img src="images/gallery-pic12.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--                <div class="slide">-->
+<!--                <img src="images/gallery-pic13.jpeg" alt="">-->
+<!--                <div class="info">-->
+<!--                    <h2></h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="navigation">-->
+<!--                <div class="btn active"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--                <div class="btn"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
 </main>
-<script src="./js/imageslider.js"></script>
+<script src="js/main.js"></script>
 </body>
 <footer>
     <a href="#">Twitter</a> | <a href="https://www.instagram.com/ramiskapsalon/?hl=nl">Instagram</a> | <a href="https://www.facebook.com/ramiskapsalon/">Facebook</a>
