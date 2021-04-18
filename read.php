@@ -29,7 +29,7 @@ mysqli_close($db);
     <link rel="stylesheet" href="css/reservationlist.css">
 </head>
 <body>
-<header><a href="login.php"><div id="submit"><input type="submit" name="submit" value="Home"/></div></a></header>
+<header></header>
 <nav></nav>
 <main></main>
 <section>

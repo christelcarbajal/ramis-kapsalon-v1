@@ -57,7 +57,7 @@ body {
 nav {
     display: flex;
     padding: 5px 0;
-    margin: 2px;
+    margin: 0px;
     color: white;
     font-weight: bolder;
     font-family: Philosopher fantasy ;
