@@ -15,7 +15,7 @@ if (!isset($_SESSION['loggedInUser'])) {
 require_once "includes/database.php";
 
 // Get the data from the database
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM reservations";
 $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
 //Add information to array

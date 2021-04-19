@@ -19,7 +19,7 @@ require_once "includes/database.php";
 if (isset($_POST['submit'])) {
 
     //delete data from db
-    $query = "DELETE FROM reservation.users WHERE id = " . mysqli_escape_string($db, $_POST['id']);
+    $query = "DELETE FROM reservations WHERE id = " . mysqli_escape_string($db, $_POST['id']);
     mysqli_query($db, $query) or die ('Error: ' . mysqli_error($db));
 
     //Close the db connection
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
     $userId = $_GET['id'];
 
     //Get data from database
-    $query = "SELECT * FROM reservation.users WHERE id = " . mysqli_escape_string($db, $userId);
+    $query = "SELECT * FROM reservations WHERE id = " . mysqli_escape_string($db, $userId);
     $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
     if (mysqli_num_rows($result) == 1) {

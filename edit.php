@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
     if (empty($errors)) {
 
         //save edited data in database
-        $query = "UPDATE users  SET firstname = '$firstname', lastname = '$lastname',
+        $query = "UPDATE reservations  SET firstname = '$firstname', lastname = '$lastname',
         email = '$email', phone = '$phone', date = '$date', time ='$time'  WHERE id = '$users'";
         $result = mysqli_query($db, $query);
 
@@ -62,11 +62,11 @@ if (isset($_POST['submit'])) {
     $users = $_GET['id'];
 
     //Get data from database {checking if there ..
-    $query = "SELECT * FROM users WHERE id = " . mysqli_escape_string($db, $users);
+    $query = "SELECT * FROM reservations WHERE id = " . mysqli_escape_string($db, $users);
     $result = mysqli_query($db, $query);
 
     if (mysqli_num_rows($result) == 1) {
-        $users = mysqli_fetch_assoc($result);
+        $admin = mysqli_fetch_assoc($result);
 
     } else {
 
@@ -101,43 +101,38 @@ mysqli_close($db);
 <form action="" method="post">
     <div>
         <label for="firstname">Voornaam:</label>
-        <input id="firstname" type="text" name="firstname" value="<?= htmlentities($users['firstname']) ?>"/>
+        <input id="firstname" type="text" name="firstname" value="<?= htmlentities($admin['firstname']) ?>"/>
         <span class="errors"><?= isset($errors['firstname']) ? $errors['firstname'] : '' ?></span>
     </div>
     <div>
         <label for="lastname">Achternaam:</label>
-        <input id="lastname" type="text" name="lastname" value="<?= htmlentities($users['lastname']) ?>"/>
+        <input id="lastname" type="text" name="lastname" value="<?= htmlentities($admin['lastname']) ?>"/>
         <span class="errors"><?= isset($errors['lastname']) ? $errors['lastname'] : '' ?></span>
     </div>
     <div>
         <label for="email">E-mailadres:</label>
-        <input id="email" type="text" name="email" value="<?= htmlentities($users['email']) ?>"/>
+        <input id="email" type="text" name="email" value="<?= htmlentities($admin['email']) ?>"/>
         <span class="errors"><?= isset($errors['email']) ? $errors['email'] : '' ?></span>
     </div>
     <div>
         <label for="phone">Telefoon:</label>
-        <input id="phone" type="text" name="phone" value="<?= htmlentities($users['phone']) ?>"/>
+        <input id="phone" type="text" name="phone" value="<?= htmlentities($admin['phone']) ?>"/>
         <span class="errors"><?= isset($errors['phone']) ? $errors['phone'] : '' ?></span>
     </div>
-<!--    <div>-->
-<!--        <label for="date">Datum:</label>-->
-<!--        <input id="date" type="text" name="date" value="--><?//= htmlentities($users['date']) ?><!--"/>-->
-<!--        <span class="errors">--><?//= isset($errors['date']) ? $errors['date'] : '' ?><!--</span>-->
-<!--    </div>-->
 
     <div>
-        <label for="email">E-mailadres</label>
-        <input id="email" type="text" name="email" value="<?= htmlentities($users['email']) ?>"/>
-        <span style="color:red" class="errors"><?= isset($errors['email']) ? $errors['email'] : '' ?></span>
+        <label for="date">Datum</label>
+        <input id="date" type="text" name="date" value="<?= htmlentities($admin['date']) ?>"/>
+        <span class="errors"><?= isset($errors['date']) ? $errors['date'] : '' ?></span>
     </div>
 
     <div>
         <label for="time">Tijd:</label>
-        <input id="time" type="text" name="time" value="<?= htmlentities($users['time']) ?>"/>
+        <input id="time" type="text" name="time" value="<?= htmlentities($admin['time']) ?>"/>
         <span class="errors"><?= isset($errors['time']) ? $errors['time'] : '' ?></span>
     </div>
     <div>
-        <input type="hidden" name="id" value="<?=$users['id']?>"/>
+        <input type="hidden" name="id" value="<?=$admin['id']?>"/>
         <input type="submit" name="submit" value="Opslaan"/>
     </div>
 </form>

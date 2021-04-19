@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     if (empty($errors)){
 
         //data will be saved to db
-        $query = "INSERT INTO users (firstname, lastname, email, phone, date, time)
+        $query = "INSERT INTO reservations (firstname, lastname, email, phone, date, time)
                   VALUES ('$firstname', '$lastname', '$email', '$phone', '$date', '$time')";
         $result = mysqli_query($db, $query) or die('Error:' . $query);
 
