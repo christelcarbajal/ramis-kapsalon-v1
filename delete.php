@@ -1,35 +1,53 @@
 <?php
 
+//Start session
+session_start();
+
+//Check if admin is logged in, otherwise move back to Login-page
+if (!isset($_SESSION['loggedInUser'])) {
+    header("Location: login.php");
+    exit;
+}
+
+//Fix undefined variable
 /** @var $db */
 
+//Database required
 require_once "includes/database.php";
 
+//If submit-button was pressed..
 if (isset($_POST['submit'])) {
+
+    //delete data from db
     $query = "DELETE FROM reservation.users WHERE id = " . mysqli_escape_string($db, $_POST['id']);
     mysqli_query($db, $query) or die ('Error: ' . mysqli_error($db));
 
+    //Close the db connection
     mysqli_close($db);
 
+    //After deletion redirect to read page
     header("Location: read.php");
-    exit;
-
 
 } else if (isset($_GET['id'])) {
 
+    //Get parameter from SUPER GLOBAL $_GET
     $userId = $_GET['id'];
 
+    //Get data from database
     $query = "SELECT * FROM reservation.users WHERE id = " . mysqli_escape_string($db, $userId);
     $result = mysqli_query($db, $query) or die ('Error: ' . $query);
 
     if (mysqli_num_rows($result) == 1) {
         $user = mysqli_fetch_assoc($result);
+
     } else {
-        // Redirect to 'read' page when result is not 1
+
+        // Redirect to read page when database returns with no results
         header('Location: read.php');
         exit;
     }
 } else {
-    // this gets executed if id was not present in the url or the form was not submitted
+    // Execute if id was not present in the url / if form was not submitted
     header('Location: read.php');
     exit;
 }
@@ -58,7 +76,7 @@ if (isset($_POST['submit'])) {
     </p>
     <input type="hidden" name="id" value="<?= $user['id'] ?>"/>
     <input type="submit" name="submit" value="Verwijderen"/>
-
+        <a href="read.php"><button type="button">Terug</button></a><br><br>
     </form>
 </section>
 </body>

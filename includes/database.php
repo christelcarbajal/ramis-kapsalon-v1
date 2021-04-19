@@ -1,4 +1,5 @@
 <?php
+
 // Database General Settings
 $host = "localhost";
 $name = "root";

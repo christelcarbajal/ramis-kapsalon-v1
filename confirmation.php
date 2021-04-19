@@ -1,7 +1,9 @@
 <?php
 
+//Database required
 require_once "includes/database.php";
 
+//Variables
 $firstname = $_GET ['firstname'];
 $middlename = empty($_GET['middlename']) ? '' :  $_GET['middlename'];
 $lastname = $_GET['lastname'];

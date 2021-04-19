@@ -1,52 +1,47 @@
 <?php
 
-/** @var $db */
+//Linking Database
 require_once "includes/database.php";
 
+//Fix undefined variable
+/** @var $db */
+
+
+//Check if form is submitted
 if (isset($_POST['submit'])) {
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
 
-    $errors = [];
-    if (empty($firstname)) {
-        $errors[] = '"Voornaam" mag niet leeg zijn.';
-    }
-    if (empty($lastname)) {
-        $errors[] = '"Achternaam" mag niet leeg zijn.';
-    }
-    if (empty($email)) {
-        $errors[] = '"Email" mag niet leeg zijn.';
-    }
-    if (empty($phone)) {
-        $errors[] = '"Telefoon" mag niet leeg zijn.';
-    }
-    if (empty($date)) {
-        $errors[] = '"Datum" mag niet leeg zijn.';
-    }
-    if (empty($time)) {
-        $errors[] = '"Tijd" mag niet leeg zijn.';
-    }
+    //Get user information  from session
+    $loggedInUser = $_SESSION['loggedInUser'];
 
+    //Retrieve data and post back to user
+    $firstname = mysqli_real_escape_string($db, $_POST['firstname']);
+    $lastname = mysqli_escape_string($db, $_POST['lastname']);
+    $email = mysqli_escape_string($db, $_POST['email']);
+    $phone = mysqli_escape_string($db, $_POST['phone']);
+    $date = mysqli_escape_string($db, $_POST['date']);
+    $time = mysqli_escape_string($db, $_POST['time']);
+
+    //Validation form required
+   require_once "includes/validation-form.php";
+
+    //If there are no errors..
     if (empty($errors)){
 
-
+        //data will be saved to db
         $query = "INSERT INTO users (firstname, lastname, email, phone, date, time)
                   VALUES ('$firstname', '$lastname', '$email', '$phone', '$date', '$time')";
-        $result = mysqli_query($db, $query);
+        $result = mysqli_query($db, $query) or die('Error:' . $query);
 
 
         if ($result) {
             header("Location: /hrfiles/CLE2-project-ramie/confirmation.php?firstname=$firstname&lastname=$lastname&email=$email&phone=$phone&date=$date&time=$time");
             exit;
         } else {
+            $errors['db'] = 'Er is iets fout gegaan, probeer nogmaals opnieuw: ' . mysqli_error($db);
 
+//            // To control if there is an error, without sending it to the user.
+//            die(mysqli_error($db));
 
-            // To control if there is an error, without sending it to the user.
-            die(mysqli_error($db));
         }
 
         // Close the db connection
@@ -114,121 +109,6 @@ if (isset($_POST['submit'])) {
         </form>
         </div>
     </section>
-
-<!--    <section>-->
-<!--    <h1>Gallery</h1><br>-->
-<!--        <div class="img-slider">-->
-<!--            <div class="img-container">-->
-<!--            <div class="slide active">-->
-<!---->
-<!--                <img src="images/gallery-pic1.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic2.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic3.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic4.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic5.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--                <div class="slide">-->
-<!--                <img src="images/gallery-pic6.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--                <div class="slide">-->
-<!--                <img src="images/gallery-pic7.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic8.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--                <div class="slide">-->
-<!--                <img src="images/gallery-pic9.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic10.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic11.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="slide">-->
-<!--                <img src="images/gallery-pic12.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--                <div class="slide">-->
-<!--                <img src="images/gallery-pic13.jpeg" alt="">-->
-<!--                <div class="info">-->
-<!--                    <h2></h2>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="navigation">-->
-<!--                <div class="btn active"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--                <div class="btn"></div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
 
 </main>
 <script src="js/main.js"></script>

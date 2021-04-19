@@ -1,10 +1,17 @@
 <?php
+//Start session
+session_start();
 
-/**
- * @var $db
- */
+//Check if admin is logged in, otherwise move back to Login-page
+if (!isset($_SESSION['loggedInUser'])) {
+    header("Location: login.php");
+    exit;
+}
 
-//Database require once
+/** @var $db */
+/** @var $user */
+
+//Database required once
 require_once "includes/database.php";
 
 // Get the data from the database
@@ -20,6 +27,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 // Close db connection
 mysqli_close($db);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,13 +60,13 @@ mysqli_close($db);
     <tbody>
     <?php foreach ($users as $user) { ?>
         <tr>
-            <td><?= $user['id'] ?></td>
-            <td><?= $user['firstname'] ?></td>
-            <td><?= $user['lastname'] ?></td>
-            <td><?= $user['email'] ?></td>
-            <td><?= $user['phone'] ?></td>
-            <td><?= $user['date'] ?></td>
-            <td><?= $user['time'] ?></td>
+            <td><?= htmlentities($user['id']) ?></td>
+            <td><?= htmlentities($user['firstname']) ?></td>
+            <td><?= htmlentities($user['lastname']) ?></td>
+            <td><?= htmlentities($user['email']) ?></td>
+            <td><?= htmlentities($user['phone']) ?></td>
+            <td><?= htmlentities($user['date']) ?></td>
+            <td><?= htmlentities($user['time']) ?></td>
             <td><a href="edit.php?id=<?=$user['id']?>">Wijzig</a></td>
             <td><a href="delete.php?id=<?=$user['id']?>">Verwijder</a></td>
         </tr>
@@ -66,6 +74,7 @@ mysqli_close($db);
     </tbody>
             </table>
         </div>
+    <a href="logout.php"><button type="button">Uitloggen</button></a><br><br>
 </section>
 </body>
 </html>

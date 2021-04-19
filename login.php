@@ -1,42 +1,58 @@
 <?php
+//Start session
+session_start();
 
-/**
- * @var $username
- * @var $db
+//Undefined variables fixed
+/** @var $username
+ * @var mysqli $db
  */
 
+//Database required
 require_once "includes/database.php";
 
-// If form is posted, validate it
+
+// Check if admin is logged in, otherwise redirects to read page
+if (isset($_SESSION['loggedInUser'])) {
+    header("Location: read.php");
+    exit;
+}
+
+// If submit-button was pressed..
 if (isset($_POST['submit'])) {
+
     // Retrieve posted data
-    $username = $_POST['username'];
-    $password = $_POST['pwd'];
+    $username = mysqli_escape_string($db, $_POST['username']);
+    $password = $_POST['password'];
 
-    // Get username and password from db
-    $query = "SELECT * FROM admin WHERE username = '$username'";
+    // Get username and password from database
+    $query = "SELECT * FROM reservation.admin WHERE username = '$username'";
     $result = mysqli_query($db, $query) or die('Error: ' . $query);
-    $users = mysqli_fetch_assoc($result);
-    
+    $admin = mysqli_fetch_assoc($result);
 
-    // Check if username exists in database
+
+    // Check if username already exists in database
     $errors = [];
-    if ($username) {
-//        print_r('Test');
+    if ($admin) {
 
         //Password validation
-        if ($password == $users['password']) {
+        if (password_verify($password, $admin['password'])) {
 
+            // Set username for later use in Session
+            $_SESSION['loggedInUser'] = [
+                'name' => $admin['name'],
+                'id' => $admin['id']
+            ];
 
-            // Redirect to read page
+            // Redirect to read page & exit script
             header("Location: /hrfiles/CLE2-project-ramie/read.php");
             exit;
 
         } else {
-            $errors[] = 'Je logingegevens zijn onjuist';
+            $errors[] = 'Uw logingegevens zijn onjuist';
         }
+
     } else {
-        $errors[] = 'Je logingegevens zijn onjuist';
+        $errors[] = 'Uw logingegevens zijn onjuist';
     }
 }
 ?>
@@ -61,21 +77,28 @@ if (isset($_POST['submit'])) {
 <main>
     <section>
         <div class="user-login">
-        <h1>Inloggen</h1>
-            <form method="post" id="login" action="" >
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" value="<?= isset ($username) ? htmlentities($username) : '' ?>"/>
-                <span class="errors"><?= isset($errors['username']) ? $errors['username'] : '' ?></span>
-            </div>
+            <h1>Inloggen</h1>
+
+            <?php if (isset($errors) && !empty($errors)) { ?>
+                <ul class="errors">
+                    <?php for ($i = 0; $i < count($errors); $i++) { ?>
+                        <li><?= $errors[$i]; ?></li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
+
+            <form id="login" method="post" action="<?= $_SERVER['REQUEST_URI']; ?>">
                 <div>
-                    <label for="pwd">Wachtwoord:</label>
-                    <input type="password" id="pwd" name="pwd" value="<?= isset ($password) ? htmlentities($password) : '' ?>"/>
-                    <span class="errors"><?= isset($errors['pwd']) ? $errors['pwd'] : '' ?></span>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="<?= isset ($username) ? htmlentities($username) : '' ?>"/>
                 </div>
-            <div>
-                <input type="submit" name="submit" value="Inloggen"/>
-            </div>
+                <div>
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" name="password" id="password"/>
+                </div>
+                <div>
+                    <input type="submit" name="submit" value="Inloggen"/>
+                </div>
             </form>
         </div>
     </section>
