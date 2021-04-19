@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
 
     // Get username and password from database
-    $query = "SELECT * FROM reservation.admin WHERE username = '$username'";
+    $query = "SELECT * FROM admin WHERE username = '$username'";
     $result = mysqli_query($db, $query) or die('Error: ' . $query);
     $admin = mysqli_fetch_assoc($result);
 
