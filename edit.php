@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
     //Get parameter from SUPER GLOBAL $_GET
     $users = $_GET['id'];
 
-    //Get data from database {checking if there ..
+    //Get data from database ..
     $query = "SELECT * FROM reservations WHERE id = " . mysqli_escape_string($db, $users);
     $result = mysqli_query($db, $query);
 

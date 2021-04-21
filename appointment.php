@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     $loggedInUser = $_SESSION['loggedInUser'];
 
     //Retrieve data and post back to user
-    $firstname = mysqli_real_escape_string($db, $_POST['firstname']);
+    $firstname = mysqli_escape_string($db, $_POST['firstname']);
     $lastname = mysqli_escape_string($db, $_POST['lastname']);
     $email = mysqli_escape_string($db, $_POST['email']);
     $phone = mysqli_escape_string($db, $_POST['phone']);

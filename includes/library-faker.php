@@ -4,13 +4,14 @@
 /** @var $db */
 
 //Database required
-require_once 'includes/database.php';
+require_once 'database.php';
 
-//Require faker (library)
-require_once "../Faker/src/autoload.php";
-require_once "../Faker/src/Faker/Provider/Base.php";
+//Require Faker (library)
+//Auto load Faker
+require_once "../../Faker/src/autoload.php";
+require_once "../../Faker/src/Faker/Provider/Base.php";
 
-//Generate faker data
+//Generate Faker data
 $faker = Faker\Factory::create();
 
 for ($i=0; $i<5; $i++){
