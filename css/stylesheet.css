@@ -1,3 +1,7 @@
+* {
+    font-family: sans-serif;
+}
+
 u {
     color: blue;
 }
@@ -119,11 +123,14 @@ h2 {
 .bio-img {
     display:inline-block;
     width: 56%;
-    margin-right: 17px;
-    border-radius: 14px;
+    margin-right: 13px;
+    border-radius: 165px;
+    margin-bottom: 58px;
 }
 
 .biografie-tekst {
+    font-family: sans-serif;
+    font-style: italic;
     width: 40%;
     display: inline-block;
     font-size: 1.1em;
@@ -400,8 +407,8 @@ iframe{
     position: absolute;
     bottom: 15px;
     left: 15px;
-    color: white;
-    font-size: 20px;
+    color: goldenrod;
+    font-size: 1.2em;
 }
 
 /* Closable button inside the image */
