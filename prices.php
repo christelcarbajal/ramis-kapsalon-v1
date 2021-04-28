@@ -31,7 +31,7 @@
                 <td><i> € 17,50</i></td>
             </tr>
             <tr>
-                <td>Kinderen t/m 12</td>
+                <td>Kinderen t/m 12 jaar</td>
                 <td><i> € 22,50</i></td>
             </tr>
             <tr>

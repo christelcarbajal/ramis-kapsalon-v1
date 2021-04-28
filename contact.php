@@ -24,7 +24,7 @@
     <section>
         <div class="openingstijden">
         <h1>Openingstijden</h1><br>
-        <table style="width:50%">
+        <table>
             <tr>
                 <td>Maandag</td>
                 <td>Gesloten</td>
@@ -60,8 +60,7 @@
     <section>
         <div class="contact">
         <h1>Contact</h1><br>
-        <p>
-        <b>Adres</b>
+        <p><b>Adres</b>
         <br>Gorsstraat 14,
         <br>3201 DB Spijkenisse
         </p>

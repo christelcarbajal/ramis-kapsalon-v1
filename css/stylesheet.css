@@ -54,7 +54,7 @@ body {
     border-radius: 5px;
     border: black;
     margin: 0 auto;
-    font-family: Merriweather fantasy;
+    font-family: sans-serif;
     font-size: 1.1em;
 }
 
@@ -291,6 +291,10 @@ iframe{
     width: 50%;
 }
 
+th, td {
+    padding: 10px;
+}
+
 /* HOME img slider manual */
 
 * {box-sizing:border-box}
@@ -404,11 +408,16 @@ iframe{
 
 /* Expanding image text */
 #imgtext {
+    font-family: sans-serif;
     position: absolute;
     bottom: 15px;
     left: 15px;
-    color: goldenrod;
+    color: black;
+    background-color: white;
+    background-size: 1.5em ;
     font-size: 1.2em;
+    border-radius: 4px;
+
 }
 
 /* Closable button inside the image */
