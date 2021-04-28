@@ -14,6 +14,7 @@
 <nav>
     <a href="home.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
+    <a href="gallery.php"><div>Gallery</div></a>
     <a href="prices.php"><div>Tarieven</div></a>
     <a href="contact.php"><div>Contact</div></a>
     <a href="login.php"><div>Login</div></a>

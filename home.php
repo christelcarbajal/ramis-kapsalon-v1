@@ -14,6 +14,7 @@
 <nav>
     <a href="home.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
+    <a href="gallery.php"><div>Gallery</div></a>
     <a href="prices.php"><div>Tarieven</div></a>
     <a href="contact.php"><div>Contact</div></a>
     <a href="login.php"><div>Login</div></a>
@@ -36,68 +37,122 @@
     </section>
     <section>
         <h1>Gallery</h1><br>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="images/gallery-pic1.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic2.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic3.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic4.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic5.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic6.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic7.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic8.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic9.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic10.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic11.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic12.jpeg">
-            </div>
-            <div class="mySlides fade">
-                <img src="images/gallery-pic13.jpeg">
+        <div class="img-slider">
+            <div class="img-container">
+
+                <a class="prev" onclick="plusSlides(-1)"><div id="prev"></a>
+                <a class="next" onclick="plusSlides(1)"><div id="next"></a>
+
+                <div class="slide active">
+                    <img src="images/gallery-pic1.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic2.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic3.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic4.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic5.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic6.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic7.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic8.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic9.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic10.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic11.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic12.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="images/gallery-pic13.jpeg" alt="">
+                    <div class="info">
+                        <h2></h2>
+                    </div>
+                </div>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div><br>
-
-        <div class="dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
-            <span class="dot" onclick="currentSlide(11)"></span>
-            <span class="dot" onclick="currentSlide(12)"></span>
-            <span class="dot" onclick="currentSlide(13)"></span>
+            <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
         </div>
-
     </section>
+
 </main>
     <script src="js/main.js"></script>
 <footer>

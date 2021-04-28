@@ -1,9 +1,5 @@
 <?php
 
-//_js fotos maken van de prijzen of meer informatie geven zoals prijs
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +15,7 @@
 <nav>
     <a href="home.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
+    <a href="gallery.php"><div>Gallery</div></a>
     <a href="prices.php"><div>Tarieven</div></a>
     <a href="contact.php"><div>Contact</div></a>
     <a href="login.php"><div>Login</div></a>
@@ -26,8 +23,9 @@
 <main>
     <section>
         <div class="tarieven">
+            <div class="table">
         <h1>Tarieven</h1><br>
-        <table style="width:50%">
+        <table>
             <tr>
                 <td>Contouren</td>
                 <td><i> € 17,50</i></td>
