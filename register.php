@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
 <body>
 <header></header>
 <nav>
-    <a href="home.php"><div>Home</div></a>
+    <a href="index.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
     <a href="gallery.php"><div>Gallery</div></a>
     <a href="prices.php"><div>Tarieven</div></a>

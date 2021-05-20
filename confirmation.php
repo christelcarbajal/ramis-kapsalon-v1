@@ -40,7 +40,7 @@ $time = $_GET['time'];
                 <br>
                 Tijd:&nbsp; <?= $time ?>
             </p>
-            <a href="home.php"><div id="submit"><input type="submit" name="back" value="Back"/></div></a>
+            <a href="index.php"><div id="submit"><input type="submit" name="back" value="Back"/></div></a>
         </div>
     </div>
 </div>

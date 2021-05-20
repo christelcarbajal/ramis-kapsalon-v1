@@ -12,7 +12,7 @@
 <body>
     <header><a href="appointment.php"><div id="submit"><input type="submit" name="submit" value="Make an appointment"/></div></a></header>
 <nav>
-    <a href="home.php"><div>Home</div></a>
+    <a href="index.php"><div>Home</div></a>
     <a href="appointment.php"><div>Afspraak</div></a>
     <a href="gallery.php"><div>Gallery</div></a>
     <a href="prices.php"><div>Tarieven</div></a>
@@ -40,8 +40,8 @@
         <div class="img-slider">
             <div class="img-container">
 
-                <a class="prev" onclick="plusSlides(-1)"><div id="prev"></a>
-                <a class="next" onclick="plusSlides(1)"><div id="next"></a>
+<!--                <a class="prev" onclick="plusSlides(-1)"><div id="prev"></a>-->
+<!--                <a class="next" onclick="plusSlides(1)"><div id="next"></a>-->
 
                 <div class="slide active">
                     <img src="images/gallery-pic1.jpeg" alt="">
